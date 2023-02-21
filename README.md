@@ -10,13 +10,13 @@
 먼저 첫 번째로, `pubspec.yaml`파일에 아래 코드를 작성하여 프로젝트에 본 플러그인을 추가합니다.
 ```yaml
 dependencies:
-  thecheat_flutter: ^1.0.0
+  thecheat_flutter: ^1.0.1
 ```
 
 본 플러그인에서는 아래 리스트와 같은 패키지를 사용합니다. 개발을 진행할 떄 참고해주세요.
 1. [dio](https://pub.dev/packages/dio) (5.0.0)
 1. [encrypt](https://pub.dev/packages/encrypt) (5.0.1)
-1. [intl](https://pub.dev/packages/intl) (0.18.0)
+1. [intl](https://pub.dev/packages/intl) (0.17.0)
 
 
 ### 구현 가이드
