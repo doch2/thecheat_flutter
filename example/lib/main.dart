@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ThecheatFraudSearch _fraudSearch = ThecheatFraudSearch();
 
   final searchKeyword = TextEditingController();
+  String responseData = "(응답 결과 표시)";
 
   late double _height, _width;
 
@@ -71,7 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             GestureDetector(
-              onTap: () async => _showToast((await _fraudSearch.search(searchKeyword.text, FraudSearchType.phone)).toJson().toString()),
+              onTap: () async {
+                responseData = (await _fraudSearch.search(searchKeyword.text, FraudSearchType.phone)).toJson().toString();
+                setState(() {});
+              },
               child: Container(
                 width: 200,
                 height: 50,
@@ -84,7 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             GestureDetector(
-              onTap: () async => _showToast((await _fraudSearch.search(searchKeyword.text, FraudSearchType.account)).toJson().toString()),
+              onTap: () async {
+                responseData = (await _fraudSearch.search(searchKeyword.text, FraudSearchType.account)).toJson().toString();
+                setState(() {});
+              },
               child: Container(
                 width: 200,
                 height: 50,
@@ -95,7 +102,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Center(child: Text("사기 기록 조회하기 (계좌번호)", style: TextStyle(color: Colors.white))),
               ),
             ),
-
+            const SizedBox(height: 36),
+            const Text("API 응답 결과", style: TextStyle(fontSize: 18)),
+            const SizedBox(height: 8),
+            SizedBox(
+              width: _width * 0.8,
+              child: Text(responseData),
+            )
           ],
         ),
       ),
