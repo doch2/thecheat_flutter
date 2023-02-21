@@ -1,0 +1,27 @@
+name: thecheat_flutter
+description: 금융사기방지 더치트 API를 플러터에서 이용할 수 있게 해주는 플러그인
+version: 1.0.0
+homepage: https://github.com/doch2/thecheat_flutter
+
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  dio: ^5.0.0
+  encrypt: ^5.0.1
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
